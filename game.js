@@ -20,7 +20,7 @@ var Score_Board = /** @class */ (function () {
         this.column = document.createElement('div');
         this.Btn = document.getElementById(btnId);
         this.Btn.onclick = this.Hit();
-        this.column.className = "col-lg-5 col-sm-5";
+        this.column.className = "col-lg-5 col-md-5";
         this.column.appendChild(temp);
         this.table = document.createElement('table');
         this.table.id = id;
@@ -120,7 +120,7 @@ var Game_Panel = /** @class */ (function () {
         this.reset = 0;
         this.middlePart = function () {
             _this.column = document.createElement('div');
-            _this.column.className = "col-lg-2 col-sm-2";
+            _this.column.className = "col-lg-2 col-md-2";
             _this.results = document.createElement('p');
             _this.results.innerHTML = "<br>";
             _this.column.appendChild(_this.results);

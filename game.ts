@@ -22,7 +22,7 @@ class Score_Board{
         this.column=document.createElement('div');
         this.Btn=document.getElementById(btnId) as HTMLInputElement;
         this.Btn.onclick=this.Hit();
-        this.column.className="col-lg-5 col-sm-5";
+        this.column.className="col-lg-5 col-md-5";
         this.column.appendChild(temp);
         this.table=document.createElement('table');
         this.table.id=id;this.Id=id;
@@ -139,7 +139,7 @@ constructor(){
 }
 middlePart=()=>{
     this.column=document.createElement('div');
-    this.column.className="col-lg-2 col-sm-2";
+    this.column.className="col-lg-2 col-md-2";
 
     this.results=document.createElement('p');
     this.results.innerHTML="<br>";
