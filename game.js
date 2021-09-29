@@ -156,7 +156,7 @@ var Game_Panel = /** @class */ (function () {
         this.obj = this.obj1;
         this.obj2.Btn.disabled = true;
         this.obj.Btn.disabled = true;
-        this.start.innerHTML = "Start Timer<br>" + this.obj.Name;
+        this.start.innerHTML = "Start Timer For<br>" + this.obj.Name;
     }
     Game_Panel.prototype.GenerateResults = function () {
         var _this = this;
@@ -207,7 +207,7 @@ var Game_Panel = /** @class */ (function () {
                     _this.obj.Btn.disabled = true;
                     _this.obj = (_this.obj === _this.obj1) ? _this.obj2 : _this.obj1;
                     _this.reset += 1;
-                    _this.start.innerHTML = "Start Timer<br>" + _this.obj.Name;
+                    _this.start.innerHTML = "Start Timer For<br>" + _this.obj.Name;
                     _this.start.disabled = false;
                     clearInterval(x);
                 }

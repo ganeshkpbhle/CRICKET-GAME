@@ -136,7 +136,7 @@ constructor(){
     this.obj=this.obj1;
     this.obj2.Btn.disabled=true;
     this.obj.Btn.disabled=true;
-    this.start.innerHTML="Start Timer<br>"+this.obj.Name;
+    this.start.innerHTML="Start Timer For<br>"+this.obj.Name;
 }
 middlePart=()=>{
     this.column=document.createElement('div');
@@ -219,7 +219,7 @@ Start():()=>void{
                 this.obj.Btn.disabled=true;
                 this.obj=(this.obj===this.obj1)?this.obj2:this.obj1;
                 this.reset+=1;
-                this.start.innerHTML="Start Timer<br>"+this.obj.Name;
+                this.start.innerHTML="Start Timer For<br>"+this.obj.Name;
                 this.start.disabled=false;
                 clearInterval(x);
             }
