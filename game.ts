@@ -122,6 +122,7 @@ class Game_Panel{
     obj:Score_Board;
     start:HTMLInputElement;
     reset:number=0;
+    flex:HTMLElement;
 constructor(){
     this.obj1=new Score_Board("TEAM 1","team1","hit1","score1");  
     this.middlePart();  
@@ -139,12 +140,6 @@ constructor(){
 middlePart=()=>{
     this.column=document.createElement('div');
     this.column.className="col-lg-2 col-sm-2";
-    let temp=document.createElement('button');
-    temp.type="button";
-    temp.className="btn btn-primary";
-    temp.id="result";
-    temp.innerText="GENERATE RESULTS";
-    this.column.appendChild(temp);
 
     this.results=document.createElement('p');
     this.results.innerHTML="<br>";
@@ -152,7 +147,7 @@ middlePart=()=>{
 
     this.results=document.createElement('p');
     this.results.id="team";
-    this.results.className="text3 "+"border1";
+    this.results.className="text3 border1";
     this.results.innerHTML="MATCH WON BY";
     this.column.appendChild(this.results);
 
@@ -162,7 +157,7 @@ middlePart=()=>{
 
     this.results=document.createElement('p');
     this.results.id="man";
-    this.results.className="text3 "+"border1";
+    this.results.className="text3 border1";
     this.results.innerHTML="MAN OF THE MATCH";
     this.column.appendChild(this.results);
     document.getElementById('game-area').appendChild(this.column);

@@ -121,18 +121,12 @@ var Game_Panel = /** @class */ (function () {
         this.middlePart = function () {
             _this.column = document.createElement('div');
             _this.column.className = "col-lg-2 col-sm-2";
-            var temp = document.createElement('button');
-            temp.type = "button";
-            temp.className = "btn btn-primary";
-            temp.id = "result";
-            temp.innerText = "GENERATE RESULTS";
-            _this.column.appendChild(temp);
             _this.results = document.createElement('p');
             _this.results.innerHTML = "<br>";
             _this.column.appendChild(_this.results);
             _this.results = document.createElement('p');
             _this.results.id = "team";
-            _this.results.className = "text3 " + "border1";
+            _this.results.className = "text3 border1";
             _this.results.innerHTML = "MATCH WON BY";
             _this.column.appendChild(_this.results);
             _this.results = document.createElement('p');
@@ -140,7 +134,7 @@ var Game_Panel = /** @class */ (function () {
             _this.column.appendChild(_this.results);
             _this.results = document.createElement('p');
             _this.results.id = "man";
-            _this.results.className = "text3 " + "border1";
+            _this.results.className = "text3 border1";
             _this.results.innerHTML = "MAN OF THE MATCH";
             _this.column.appendChild(_this.results);
             document.getElementById('game-area').appendChild(_this.column);

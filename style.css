@@ -54,7 +54,7 @@ h3{
 }
 .text3{
     font-size:16px;
-    text-align: center;
+    text-align:center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight:500;
     color:rgb(112, 110, 110);
@@ -66,6 +66,7 @@ h3{
     justify-content: center;
     align-items: center;
 }
-/*#game-area{
-    align-items: center;
-}*/
+#result{
+    display: flex;
+    margin: 0 auto;
+}
