@@ -20,7 +20,7 @@ var Score_Board = /** @class */ (function () {
         this.column = document.createElement('div');
         this.Btn = document.getElementById(btnId);
         this.Btn.onclick = this.Hit();
-        this.column.className = "col-lg-5 col-md-5";
+        this.column.className = "col-lg-5 col-xl-5 col-md-12 col-sm-12";
         this.column.appendChild(temp);
         this.table = document.createElement('table');
         this.table.id = id;
@@ -120,13 +120,19 @@ var Game_Panel = /** @class */ (function () {
         this.reset = 0;
         this.middlePart = function () {
             _this.column = document.createElement('div');
-            _this.column.className = "col-lg-2 col-md-2";
+            _this.column.className = "col-lg-2 col-xl-2 col-md-12 col-sm-12";
+            var btn = document.createElement('button');
+            btn.type = "button";
+            btn.className = "btn btn-primary";
+            btn.innerText = "GET RESULTS";
+            btn.id = "result";
+            _this.column.appendChild(btn);
             _this.results = document.createElement('p');
             _this.results.innerHTML = "<br>";
             _this.column.appendChild(_this.results);
             _this.results = document.createElement('p');
             _this.results.id = "team";
-            _this.results.className = "text3 border1";
+            _this.results.className = "text3 border2";
             _this.results.innerHTML = "MATCH WON BY";
             _this.column.appendChild(_this.results);
             _this.results = document.createElement('p');
@@ -134,7 +140,7 @@ var Game_Panel = /** @class */ (function () {
             _this.column.appendChild(_this.results);
             _this.results = document.createElement('p');
             _this.results.id = "man";
-            _this.results.className = "text3 border1";
+            _this.results.className = "text3 border2";
             _this.results.innerHTML = "MAN OF THE MATCH";
             _this.column.appendChild(_this.results);
             document.getElementById('game-area').appendChild(_this.column);

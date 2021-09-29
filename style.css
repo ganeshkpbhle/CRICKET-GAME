@@ -63,10 +63,27 @@ h3{
 .flex-row{
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
 #result{
     display: flex;
     margin: 0 auto;
+}
+.flex-column1{
+    display:inline-flex;
+    width: max-content;
+    text-align: center;
+    justify-content: center;
+    padding: 8px;
+}
+.border2{
+    display:flex;
+    margin: 0 auto;
+    width: fit-content;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0px 1px 0 rgb(190, 189, 189), 0 0px 1px 0 rgba(190,189,189);
 }

@@ -22,7 +22,7 @@ class Score_Board{
         this.column=document.createElement('div');
         this.Btn=document.getElementById(btnId) as HTMLInputElement;
         this.Btn.onclick=this.Hit();
-        this.column.className="col-lg-5 col-md-5";
+        this.column.className="col-lg-5 col-xl-5 col-md-12 col-sm-12";
         this.column.appendChild(temp);
         this.table=document.createElement('table');
         this.table.id=id;this.Id=id;
@@ -123,6 +123,7 @@ class Game_Panel{
     start:HTMLInputElement;
     reset:number=0;
     flex:HTMLElement;
+    div:HTMLElement;
 constructor(){
     this.obj1=new Score_Board("TEAM 1","team1","hit1","score1");  
     this.middlePart();  
@@ -139,7 +140,14 @@ constructor(){
 }
 middlePart=()=>{
     this.column=document.createElement('div');
-    this.column.className="col-lg-2 col-md-2";
+    this.column.className="col-lg-2 col-xl-2 col-md-12 col-sm-12";
+    
+    let btn=document.createElement('button');
+    btn.type="button";
+    btn.className="btn btn-primary";
+    btn.innerText="GET RESULTS";
+    btn.id="result";
+    this.column.appendChild(btn);
 
     this.results=document.createElement('p');
     this.results.innerHTML="<br>";
@@ -147,7 +155,7 @@ middlePart=()=>{
 
     this.results=document.createElement('p');
     this.results.id="team";
-    this.results.className="text3 border1";
+    this.results.className="text3 border2";
     this.results.innerHTML="MATCH WON BY";
     this.column.appendChild(this.results);
 
@@ -157,9 +165,10 @@ middlePart=()=>{
 
     this.results=document.createElement('p');
     this.results.id="man";
-    this.results.className="text3 border1";
+    this.results.className="text3 border2";
     this.results.innerHTML="MAN OF THE MATCH";
     this.column.appendChild(this.results);
+
     document.getElementById('game-area').appendChild(this.column);
 }
 GenerateResults(): () => void{
