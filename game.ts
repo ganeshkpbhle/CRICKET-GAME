@@ -116,7 +116,7 @@ class Score_Board{
 class Game_Panel{
     column:HTMLElement;
     results:HTMLElement;
-    resultBtn:HTMLElement;
+    resultBtn:HTMLInputElement;
     obj1:Score_Board;
     obj2:Score_Board;
     obj:Score_Board;
@@ -126,7 +126,9 @@ constructor(){
     this.obj1=new Score_Board("TEAM 1","team1","hit1","score1");  
     this.middlePart();  
     this.obj2=new Score_Board("TEAM 2","team2","hit2","score2");
-    document.getElementById('result').onclick=this.GenerateResults();
+    this.resultBtn= document.getElementById('result') as HTMLInputElement;
+    this.resultBtn.onclick=this.GenerateResults();
+    this.resultBtn.disabled=true;
     this.start= document.getElementById('countst') as HTMLInputElement;
     this.start.onclick=this.Start();
     this.obj=this.obj1;
@@ -210,6 +212,7 @@ Start():()=>void{
                 cnt--;
             }
             if(this.reset%2==0 && this.reset>0){
+                this.resultBtn.disabled=false;
                 this.start.innerHTML="Reload Game";
             }
         },1000);       

@@ -139,7 +139,9 @@ var Game_Panel = /** @class */ (function () {
         this.obj1 = new Score_Board("TEAM 1", "team1", "hit1", "score1");
         this.middlePart();
         this.obj2 = new Score_Board("TEAM 2", "team2", "hit2", "score2");
-        document.getElementById('result').onclick = this.GenerateResults();
+        this.resultBtn = document.getElementById('result');
+        this.resultBtn.onclick = this.GenerateResults();
+        this.resultBtn.disabled = true;
         this.start = document.getElementById('countst');
         this.start.onclick = this.Start();
         this.obj = this.obj1;
@@ -205,6 +207,7 @@ var Game_Panel = /** @class */ (function () {
                     cnt--;
                 }
                 if (_this.reset % 2 == 0 && _this.reset > 0) {
+                    _this.resultBtn.disabled = false;
                     _this.start.innerHTML = "Reload Game";
                 }
             }, 1000);
